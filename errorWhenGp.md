@@ -1,6 +1,6 @@
 # Error When gp
 
-一个本地仓库上传两个仓库的过程中
+一个本地仓库上传两个仓库的过程中出现了以下情况
 ```
 git push
 ERROR:Repository not found
