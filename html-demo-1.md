@@ -16,15 +16,15 @@
 </head>
 
 <body>
-  <hearder>广告：小高最帅</hearder>
-  <div class="middle bordered">
+  <hearder id="xxx" style="border:5px solid black;"tabindex=1>广告：小高最帅</hearder>
+  <div class="middle bordered" contenteditable>
     <main>
-      <h1>蒙蒙是谁的</h1>
+      <h1>蒙蒙是</h1>
       <section>
         <h2>
       只能是小高的你说呢
     </h2>
-        <p>对对对 只能是小高的</p>
+        <p >对对对 只能是小高的</p>
       </section>
       <section>
         <h3>
@@ -34,7 +34,7 @@
       </section>
     </main>
   </div>
-  <footer>&copy;小高所有</footer>
+  <footer tabindex=1>&copy;小高所有</footer>
 </body>
 
 </html>
