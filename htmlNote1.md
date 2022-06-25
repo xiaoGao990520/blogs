@@ -34,7 +34,7 @@ ctrl+shift+P 搜索 format document > 然后搜索 auto save 勾选 on focus sav
   code 
   <code>用于注释代码和```类似</code>
   hr  <hr>  用于分割</hr>
-  br 用于换行（如果没有pre可以用br换行）</
+  br 用于换行（如果没有pre可以用br换行）
   em/strong <strong>用于强调</strong>
   quote/blockquote <quote>用于引用某句话或者某个文章</quote>
 </pre>
