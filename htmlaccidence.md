@@ -13,7 +13,7 @@ ctrl+shift+P 搜索 format document > 然后搜索 auto save 勾选 on focus sav
  标签：
   标题：h1~h6 
   章节 section 
-  段落 p 
+  段落 p（内容）
   头部 header 
   脚步 footer 
   主要内容 main 
@@ -27,8 +27,8 @@ ctrl+shift+P 搜索 format document > 然后搜索 auto save 勾选 on focus sav
   tabindex(正数是顺序访问 0 是最后访问 -1 是不访问) 
   title（用来显示完整的内容）  
 内容标签（body 当中使用的）：  
-  ol+li(ordered list + list item) 用于有序排列  
-  ul+li(unordered list + list item) 用于无序排列
+  ol+li(ordered list + list item) 用于有序排列 前面是序号
+  ul+li(unordered list + list item) 用于无序排列 前面有点
   dl+dt+dd(description list + term + data)  
   pre(preview) 用于控制空格
   code 

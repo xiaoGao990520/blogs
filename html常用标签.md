@@ -27,7 +27,7 @@ table标签：
 <pre>
 img标签：
 作用：显示照片，给get请求
-属性：alt（加载失败显示内容）
+属性：alt（若图片加载失败则显示的名称）
      width height （高宽比）
      scr （源文件）
 事件：onload(图片加载成功) onerror（图片加载失败）
