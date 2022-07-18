@@ -5,6 +5,9 @@ css(层叠样式表)
 选择器{
     属性名：属性值;
 }
+   语法二：
+   at语法
+   @charset "UTF-8";
 2. 写代码需要附加:
 <pre>
 border:1px solid red;
@@ -19,7 +22,7 @@ inline-block 从左到右 从上到下(可以用 width)
 overflow 自动溢出
 注：div<style="margin:20px";width:auto;>
 
-5.盒模型：分两种:content-box,border-box(包含了 border content padding margin)
+5.盒模型：分两种:content-box,border-box(包含了 margin border padding content)
 
 .margin 合并只有上下合并没有左右合并
 第一个元素和最后一个元素与 parent 不合并的办法：
