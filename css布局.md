@@ -19,6 +19,6 @@ body:
 
 <pre>header class="clearfix"</pre>
 <pre>
-例子一：<a href="http://js.jirengu.com/laqunacutu/7/edit"target="_blank">两个导航</a> </pre>
+例子一：<a href="http://js.jirengu.com/laqunacutu/9/edit"target="_blank">两栏布局-如顶部条</a> </pre>
 <pre>
-例子二：<a href="http://js.jirengu.com/jomubacaha/2/edit"target="_blank">四个导航</a> </pre>
+例子二：<a href="http://js.jirengu.com/jomubacaha/20/edit"target="_blank">四栏布局 如导航</a> </pre>
