@@ -15,6 +15,13 @@ clear: both;
 }
 </pre>
 
+<code>
+.clearfix:after {
+content: '';
+display: block;
+clear: both;
+}
+</code>
 body:
 父子关系 float 与 .clearfix
 
