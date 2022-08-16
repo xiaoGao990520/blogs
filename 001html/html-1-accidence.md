@@ -11,7 +11,7 @@ ctrl+shift+P 搜索 format document > 然后搜索 auto save 勾选 on focus sav
 6.html 入门：  
  起手式：!  
  标签：
-  标题：h1~h6 
+  标题：h1~h5
   章节 section 
   段落 p（内容）
   头部 header 
