@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    /* 可以让移动端画线不在动 */
+}
+
+#canvas {
+    display: block;
+}

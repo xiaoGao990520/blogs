@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>画板</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="canvas" width="100" height="100"></canvas>
+    <!-- 定义canvas并且赋值高宽度 -->
+    <script>
+        let canvas = document.getElementById("canvas");
+        canvas.width = document.documentElement.clientWidth
+        canvas.height = document.documentElement.clientHeight
+        let ctx = canvas.getContext("2d");
+        // 抄写 var canvas = document.getElementById('canvas');
+        //     if (canvas.getContext) {
+        //     var ctx = canvas.getContext('2d');
+        ctx.fillStyle = "black";
+        ctx.strokeStyle = 'none'
+        ctx.lineWidth = 20;
+        ctx.lineCap = "round";
+        // 9. ctx.lineCap 是为了让节点变成圆的 改变锯齿问题
+        // 从网上抄的 分别是： 填充 描边 线的宽度 节点
+
+        function drawLine(x1, y1, x2, y2) {
+            ctx.beginPath();
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(x2, y2);
+            ctx.stroke();
+            // 5. 从网上抄的,并且删除下面if中的canvas中的ctx,因为重复了
+            // canvas的线叫做stroke 不是 border
+            // error: 你写的drawLine要和下面的dra
+        }
+
+
+        let painting = false
+        let last
+        // 6. 声明一个last的变量
+
+        var isTouchDevice = 'ontouchstart' in document.documentElement;
+        // console.log(isTouchDevice)
+        // 1. var是通过网上搜索出来的 如果documentElement上有ontouchstart这个事件则说明是支持的
+        // 产生的结果是手机屏幕true 电脑结果是false
+
+        if (isTouchDevice) {
+            canvas.ontouchstart = (e) => {
+                let x = e.touches[0].clientX
+                let y = e.touches[0].clientY
+                last = [x, y]
+                // 让触摸第一下的 X Y 代入 x y 并建立一个last
+            }
+            canvas.ontouchmove = (e) => {
+                // 3. 表示某一个事件e
+                let x = e.touches[0].clientX
+                let y = e.touches[0].clientY
+                drawLine(last[0], last[1], x, y)
+                last = [x, y]
+
+                // ctx.beginPath();有了drawing函数之后就可以删掉了
+                // ctx.arc(x, y, 10, 0, 2 * Math.PI);有了drawing函数之后就可以删掉了
+                // ctx.stroke();有了drawing函数之后就可以删掉了
+                // ctx.fill();有了drawing函数之后就可以删掉了
+                // // 4. 让触摸的xy开始画画
+            }
+        } else {
+            canvas.onmousedown = (e) => {
+                painting = true
+                last = [e.clientX, e.clientY]
+                // 7. 点击鼠标的XY搞到last,即为上一个点
+            }
+            canvas.onmousemove = (e) => {
+                if (painting === true) {
+                    ctx.arc(e.clientX, e.clientY, 10, 0, 2 * Math.PI);
+
+                    drawLine(last[0], last[1], e.clientX, e.clientY)
+                    last = [e.clientX, e.clientY]
+                    // 8. 每次动的时候都是这一次连接上一次的即连线
+                } else {
+                    console.log('什么都不做')
+                }
+            }
+
+            canvas.onmouseup = () => {
+                painting = false
+            }
+        }
+        // 2. 如果是触屏事件则会输入console.log打印出'目前什么都没写啊'
+        // console.log "监听" 是为了让你在控制台可以看到 你想打印的'内容'
+        // var xxxxx是为了搞一个变量 isTouchDevice 公式而已 没别的
+        // if(isTouchDevice)是为了表示如果是触摸屏 否则监听三个鼠标的事件
+
+
+
+
+    </script>
+</body>
+
+</html>
