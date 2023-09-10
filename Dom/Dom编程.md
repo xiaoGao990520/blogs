@@ -18,5 +18,9 @@
     x.nodeType
     1 表示标签document 2表示文本text        
 6. 节点的增删改查       
-    增      
+    增 删 查 改
+
+7. DOM操作是跨线程的
+
+    
 
